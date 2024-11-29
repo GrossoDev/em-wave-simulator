@@ -112,7 +112,7 @@ public class ManySourcesPanel : MonoBehaviour
         for (int i = 0; i < pucks.Count; i++)
         {
             var puck = pucks[i];
-            var phase = value * i;
+            var phase = (value * i) % (2 * Mathf.PI);
 
             puck.phase = phase;
         }

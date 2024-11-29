@@ -12,7 +12,7 @@ public class WaveController : MonoBehaviour
 
     public SimulationManager simulationManager;
 
-    private const int MAX_SOURCES = 100;
+    private const int MAX_SOURCES = 50;
 
     private void Awake()
     {

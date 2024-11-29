@@ -22,7 +22,7 @@
 
             // Constants
             #define PI 3.1415296535
-            #define MAX_SOURCES 100
+            #define MAX_SOURCES 50
 
             // Properties
             float _Brightness;
