@@ -8,22 +8,48 @@
     /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
     </style>
   </head>
-  <body style="width: 100%; height: 100%; margin: 0;">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" style="width: 100vw; height: 100vh;"></canvas>
-    <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#808080",
-    splashStyle: "Light",
-    dataUrl: "Release/Simulacion-EM.data",
-    codeUrl: "Release/Simulacion-EM.js",
-    asmUrl: "Release/Simulacion-EM.asm.js",
-    memUrl: "Release/Simulacion-EM.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
+  <body style="width: 100%; height: 100%; margin: 0; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: rgb(128, 128, 128); color: white;">
+    <div id="loadingBar" style="display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; transition-duration: 1s;">
+      <h1 style="font-weight: bolder;">Simulador de interferencia de ondas</h1>
+      <h2 style="font-weight: bolder;">Giuliano Rosso, 2024</h1>
 
+      <h2><a href="https://github.com/GrossoDev/em-wave-simulator" target="_blank" rel="noopener noreferrer">Link al repositorio en Github</a></h2>
+      
+      <h1 style="font-weight: bolder;">Cargando...</h1>
+    </div>
+    <canvas class="emscripten" id="canvas" onmousewheel="event.preventDefault()" oncontextmenu="event.preventDefault()" style="width: 100vw; height: 100vh;"></canvas>
+
+    <script type='text/javascript'>
+      var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        backgroundColor: "#808080",
+        splashStyle: "Light",
+        dataUrl: "Release/Simulacion-EM.data",
+        codeUrl: "Release/Simulacion-EM.js",
+        asmUrl: "Release/Simulacion-EM.asm.js",
+        memUrl: "Release/Simulacion-EM.mem",
+      };
+
+      const canvas = document.getElementById("canvas");
+      canvas.addEventListener("mousedown", (e) => {
+        if (e.which == 2) {
+            e.preventDefault();
+        }
+      });
+    </script>
+
+    <script src="Release/UnityLoader.js"></script>
+
+    <script type="text/javascript">
+      const loadingBar = document.getElementById("loadingBar");
+      setTimeout(() => {
+        loadingBar.style.opacity = "0";
+      }, 3000)
+      setTimeout(() => {
+        loadingBar.style.display = "none";
+      }, 5000)
+    </script>
   </body>
 </html>
