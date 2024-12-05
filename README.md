@@ -91,5 +91,10 @@ Se puede acceder a la calculadora en [https://grossodev.github.io/em-wave-simula
  - **Tecla I**: abre un cuadro para cambiar los parámetros de la(s) fuente(s) seleccionada(s).
  - **Tecla SUPRIMIR**: elimina la(s) fuente(s) seleccionada(s).
 
+## Mejoras a futuro
+ - Incorporar obstaculos que absorban las ondas.
+ - Incorporar obstaculos que reflejen las ondas.
+ - Incorporar obstaculos que refracten las ondas.
+
 ## Autor
 Giuliano Rosso, 2024
