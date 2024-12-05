@@ -6,7 +6,7 @@ Este repositorio contiene un simulador de interferencia de ondas generadas por v
 
 ### Fuente generadora de ondas
 
-La intensidad en un punto, inducido por una fuente generadora de ondas, se calcula como:
+La intensidad en un punto, inducida por una fuente generadora de ondas, se calcula como:
 
 $$s(\vec{r}, t) = A\cdot \text{sen}(kr-\omega t + \varphi)$$
 
@@ -26,7 +26,7 @@ Estos dos últimos valores, $k$ y $\omega$ dependen de la frecuencia de la onda:
 
 ### Ley inversa del cuadrado
 
-La ley inversa del cuadrado establece que la intensidad de los fenómenos ondulatorios decae de manera inversamente proporsional al cuadrado de la distancia entre la fuente y el punto del espacio.
+La ley inversa del cuadrado establece que la intensidad de los fenómenos ondulatorios decae de manera inversamente proporcional al cuadrado de la distancia entre la fuente y el punto del espacio.
 
 Entonces, de la fórmula anterior:
 
