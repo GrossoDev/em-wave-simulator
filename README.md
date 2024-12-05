@@ -8,12 +8,13 @@ Este repositorio contiene un simulador de interferencia de ondas generadas por v
 
 La intensidad en un punto, inducido por una fuente generadora de ondas, se calcula como:
 
-$$s(\vec{r}, t) = A\cdot \text{sen}(kx-\omega t + \varphi)$$
+$$s(\vec{r}, t) = A\cdot \text{sen}(kr-\omega t + \varphi)$$
 
 Donde:
  - $\vec{r}$ es la posición en el plano.
  - $t$ es un instante de tiempo.
  - $A$ es la amplitud de la onda.
+ - $r$ es la distancia entre la fuente y el punto $\vec{r}$.
  - $\varphi$ es la fase de la onda.
  - $k$ es el número de onda.
  - $\omega$ es la velocidad angular.
@@ -29,9 +30,7 @@ La ley inversa del cuadrado establece que la intensidad de los fenómenos ondula
 
 Entonces, de la fórmula anterior:
 
-$$s(\vec{r}, t) = \frac{A\cdot \text{sen}(kx-\omega t + \varphi)}{r^2}$$
-
-Donde $r$ es la distancia entre la fuente y el punto $\vec{r}$.
+$$s(\vec{r}, t) = \frac{A\cdot \text{sen}(kr-\omega t + \varphi)}{r^2}$$
 
 ### Principio de superposición
 
